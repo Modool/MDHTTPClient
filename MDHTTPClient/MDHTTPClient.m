@@ -183,7 +183,7 @@ NSString * const MDHTTPClientAuthorizeURLString = @"validateMachineNumber";
         }];
     }
     if (dataTask) {
-        NSLog(@"Begin HTTP task : %@  \nrequest : %@ \nHTTPBody: %@ \nqueryParameters : \n%@", [dataTask description], [[dataTask currentRequest] description], HTTPBody, queryParameters);
+        NSLog(@"HTTP task : %@  \nrequest : %@ \nHTTPBody: %@ \nqueryParameters : \n%@", [dataTask description], [[dataTask currentRequest] description], HTTPBody, queryParameters);
     };
     return dataTask;
 }
@@ -207,7 +207,7 @@ NSString * const MDHTTPClientAuthorizeURLString = @"validateMachineNumber";
         failure([self filterFailureResponse:task responseObject:responseObject error:error]);
     }];
     if (dataTask) {
-        NSLog(@"Begin HTTP task : %@  \nrequest : %@ \nparameters : \n%@", [dataTask description], [[dataTask currentRequest] description], parameters);
+        NSLog(@"HTTP task : %@  \nrequest : %@ \nparameters : \n%@", [dataTask description], [[dataTask currentRequest] description], parameters);
     }
     return dataTask;
 }
@@ -321,7 +321,7 @@ NSString * const MDHTTPClientAuthorizeURLString = @"validateMachineNumber";
                 // In theory, this makes parsing code forward-compatible with
                 // API additions.
                 if (*error) {
-                    NSLog(@"MTLJSONAdapter parsed model failed : %@   \n JOSN : %@", *error, responseObject);
+                    NSLog(@"Parsed model failed : %@   \n JOSN : %@", *error, responseObject);
                 }
                 return nil;
             }
