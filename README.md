@@ -8,7 +8,8 @@
 
 ## Introduction
 
-- This framework base on AFNetworking.
+- This is framework to manager HTTP requests. 
+- It's based on AFNetworking.
 
 ## How To Get Started
 
