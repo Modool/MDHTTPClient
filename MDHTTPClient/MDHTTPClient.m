@@ -9,23 +9,6 @@
 #import "MDHTTPClient.h"
 #import "NSObject+MDSerialization.h"
 
-/**
- *  NULL 转换成 空NSString
- */
-#define ntoe(string)                                       (string ? string : @"")
-
-/**
- *  NSInteger 转换成 NSString
- */
-
-#if __LP64__ || (TARGET_OS_EMBEDDED && !TARGET_OS_IPHONE)|| TARGET_OS_WIN32 || NS_BUILD_32_LIKE_64
-#define itos(integer)                                      [NSString stringWithFormat:@"%ld", (long)integer]
-#define uitos(integer)                                      [NSString stringWithFormat:@"%lu", (unsigned long)integer]
-#else
-#define itos(integer)                                      [NSString stringWithFormat:@"%d", integer]
-#define uitos(integer)                                      [NSString stringWithFormat:@"%u", integer]
-#endif
-
 NSString * const MDHTTPMethodGET        = @"GET";
 
 NSString * const MDHTTPMethodPOST       = @"POST";
@@ -42,7 +25,7 @@ NSString * const MDHTTPClientAuthorizeURLString = @"validateMachineNumber";
 
 @interface MDHTTPClient ()
 
-@property (nonatomic, copy  ) NSString *token;
+@property (nonatomic, copy) NSString *token;
 
 @end
 
