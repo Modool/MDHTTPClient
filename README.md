@@ -54,4 +54,4 @@ drag “MDHTTPClient” directory into your project
 
 ## Communication
 
-<img src="./images/qq_1000.png" width=200><img style="margin:0px 50px 0px 50px" src="./images/wechat_1000.png" width=200><img src="./images/github_1000.png" width=200>
+<img src="https://github.com/Modool/Resources/blob/master/images/social/qq_1000.png?raw=true" width=200><img style="margin:0px 50px 0px 50px" src="https://github.com/Modool/Resources/blob/master/images/social/wechat_1000.png?raw=true" width=200><img src="https://github.com/Modool/Resources/blob/master/images/social/github_1000.png?raw=true" width=200>

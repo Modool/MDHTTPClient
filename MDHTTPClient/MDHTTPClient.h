@@ -34,7 +34,7 @@ extern NSString * const MDHTTPMethodPATCH;
 
 @interface MDHTTPClient : AFHTTPSessionManager
 
-@property (nonatomic, copy  , readonly) NSString *token;
+@property (nonatomic, copy, readonly) NSString *token;
 
 + (instancetype)unauthenticatedClientWithURL:(NSURL *)URL;
 
