@@ -85,6 +85,52 @@ const NSUInteger MDHTTPClientErrorCodeFailed = 0;
 
 @end
 
+@implementation NSObject (JSON)
+
+- (id)JSONObject{
+    id JSON = [(NSString *)self mutableObjectFromJSONString];
+    if (JSON) {
+        return JSON;
+    }
+    return self;
+}
+
+@end
+
+@implementation NSArray (JSON)
+
+- (id)JSONObject{
+    NSMutableArray *array = [NSMutableArray new];
+    for (id object in self) {
+        id JSON = [object JSONObject];
+        if (JSON) {
+            [array addObject:JSON];
+        } else {
+            [array addObject:object];
+        }
+    }
+    return array;
+}
+
+@end
+
+@implementation NSDictionary (JSON)
+
+- (id)JSONObject{
+    NSMutableDictionary *dictionary = [NSMutableDictionary new];
+    for (NSString *key in array) {
+        id JSON = [object JSONObject];
+        if (JSON) {
+            [array addObject:JSON];
+        } else {
+            [array addObject:object];
+        }
+    }
+    return array;
+}
+
+@end
+
 @implementation NSDictionary (JSONSerializing)
 
 - (NSData *)JSONData;{
